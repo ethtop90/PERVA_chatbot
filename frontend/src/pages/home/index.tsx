@@ -4,12 +4,14 @@ import { Hero } from 'src/components/hero'
 
 export default function Home() {
   const { t } = useTranslation('translation')
+  const backgroundImageUrl = "/images/home-bg.jpg";
+
   return (
     <>
       <Helmet>
         <title>{t('title')}</title>
       </Helmet>
-      <Hero />
+      <Hero backgroundImage={backgroundImageUrl} />
     </>
   )
 }
