@@ -1,17 +1,22 @@
-import { Helmet } from 'react-helmet'
-import { useTranslation } from 'react-i18next'
-import { Hero } from 'src/components/hero'
+import DashboardLayout from "../../layouts/DashboardLayout";
+import { PlusIcon } from "../../assets";
 
-export default function Home() {
-  const { t } = useTranslation('translation')
-  const backgroundImageUrl = "/images/home-bg.jpg";
-
+const Home = () => {
   return (
-    <>
-      <Helmet>
-        <title>{t('title')}</title>
-      </Helmet>
-      <Hero backgroundImage={backgroundImageUrl} />
-    </>
-  )
-}
+    <DashboardLayout>
+      <div className="flex flex-col w-full bg-white py-11 ">
+        <div className="flex items-center justify-between px-10 ">
+          <p className="text-xl font-medium text-rpmary">List of admins</p>
+          <button className="bg-warning flex items-center justify-center space-x-2 py-[14px] px-5 rounded-[4px] ">
+            <PlusIcon />
+            <span className="text-sm font-bold text-secondary">
+              Add new Admin
+            </span>
+          </button>
+        </div>
+      </div>
+    </DashboardLayout>
+  );
+};
+
+export default Home;

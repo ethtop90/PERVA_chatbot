@@ -1,31 +1,20 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "useDefineForClassFields": true,
     "target": "ESNext",
-    "lib": ["esnext", "dom"],
-    "allowJs": true,
-    "moduleResolution": "node",
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "skipLibCheck": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "declaration": true,
-    "downlevelIteration": true,
-    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "rootDir": ".",
-    "jsx": "react-jsx",
-    "paths": {
-      "src/*": ["./src/*"]
-    }
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["./src", "vite-env.d.ts"]
+  "include": ["./src"]
 }

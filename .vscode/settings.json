@@ -1,5 +1,10 @@
 {
   "cSpell.words": [
-    "reduxjs"
+    "gensalt",
+    "hashpw",
+    "persistor",
+    "reduxjs",
+    "signin",
+    "stylelint"
   ]
 }

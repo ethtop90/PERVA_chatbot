@@ -1,7 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './app'
-import './styles/globals.less'
-import './i18n/config'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Toaster } from "react-hot-toast";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import App from "./App";
+import { persistor, store } from "./app/store";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<App />)
+const container = document.getElementById("root");
+
+if (!container) throw new Error("Could not find root element with id 'root'");
+
+const root = createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Toaster position="top-right" reverseOrder={true} />
+      </PersistGate>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);

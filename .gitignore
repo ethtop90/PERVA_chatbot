@@ -178,3 +178,6 @@ dist
 n
 yarn.lock
 package-lock.json
+
+# backend
+backend/.venv
